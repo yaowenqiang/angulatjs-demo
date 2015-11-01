@@ -1,4 +1,4 @@
-var artListControllers = angular.module('artListControllers',[]);
+var artListControllers = angular.module('artListControllers',['ngAnimate']);
 artListControllers.controller('ListController',['$scope','$http',function($scope,$http){
     $http.get('js/data.json').success(function(data){
         $scope.artists = data;
