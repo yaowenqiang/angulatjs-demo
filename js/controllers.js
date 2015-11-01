@@ -6,3 +6,10 @@ artListControllers.controller('ListController',['$scope','$http',function($scope
     });
 }]);
 
+artListControllers.controller('DetailsController',['$scope','$http','$routeParams',function($scope,$http,$routeParams){
+    $http.get('js/data.json').success(function(data){
+        console.log($routeParams.itemId);
+        $scope.artists = data;
+        $scope.whichItem = $routeParams.itemId;
+    });
+}]);
