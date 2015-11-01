@@ -7,6 +7,21 @@
 </head>
 <body>
     <input id="" type="text" name="" ng-model='name'>
+    <div ng-controller = 'MyController'>
     <h2>Welcome {{name}}</h2>
+    <h5>{{author.name}}</h5>
+    <p>
+    {{ author.title + ',' + author.company }}
+    </p>
+    </div>
+    <script>
+function MyController($scope){
+$scope.author = {
+        'name': "Ray villalobos",
+        'title': 'staff Author',
+        'company': 'lynda.com'
+    }
+}
+    </script>
 </body>
 </html>
